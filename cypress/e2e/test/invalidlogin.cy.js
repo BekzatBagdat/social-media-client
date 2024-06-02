@@ -1,19 +1,19 @@
 import { invalidEmail, invalidPassword } from '../../support/testdata';
 
-describe('Login with valid credentials', () => {
-  it('User can log in with valid credentials', () => {
+describe('Cannot login with invalid credentials', () => {
+  it('cannot login with invalid credentials', () => {
     // Visit the login page
     cy.visit('https://bekzatbagdat.github.io/social-media-client/');
 
     // Ensuring the register modal is not visible
     cy.get('#registerModal').then(($modal) => {
       if ($modal.is(':visible')) {
-        //close the modal
+        // Close the modal
         cy.get('#registerModal').click('topRight');
       }
     });
 
-    // the login button is visible before clicking
+    // The login button is visible before clicking
     cy.get('button[data-auth="login"][data-bs-toggle="modal"]').should(
       'be.visible',
     );
