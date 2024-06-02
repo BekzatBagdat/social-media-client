@@ -1,8 +1,22 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-
+import globals from 'globals';
+import pluginJs from '@eslint/js';
 
 export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
+  'eslint:recommended',
+  'plugin:@eslint/js/recommended',
+  {
+    env: {
+      browser: true,
+      es2021: true,
+      jest: true,
+    },
+    globals: {
+      ...globals.browser,
+      jest: true,
+      describe: true,
+      beforeEach: true,
+      it: true,
+      expect: true,
+    },
+  },
 ];
