@@ -1,9 +1,9 @@
 // User credentials for testing
 
-const validEmail = 'valid@gmail.no';
+const validEmail = 'validemail0101@noroff.no';
 const validPassword = 'validPassword';
 
-const invalidEmail = 'invalid@gmail.com';
+const invalidEmail = 'invalid@noroff.no';
 const invalidPassword = 'invalidPassword';
 
 export { validEmail, validPassword, invalidEmail, invalidPassword };
