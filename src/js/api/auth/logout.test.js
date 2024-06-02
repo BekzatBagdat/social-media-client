@@ -17,8 +17,10 @@ describe('logging out', () => {
   it('logsout the user and removes the token from localStorage', () => {
     // Calling the logout function
     logout();
+
     // Expecting removal of the token from localStorage
     expect(localStorage.removeItem).toHaveBeenCalledWith('token');
+
     // Expecting removal of the profile from localStorage
     expect(localStorage.removeItem).toHaveBeenCalledWith('profile');
   });
