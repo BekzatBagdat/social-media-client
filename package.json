@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test-e2e": "cypress open",
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier -w src/**/*.js",
@@ -20,7 +21,9 @@
     "@babel/preset-env": "^7.19.4",
     "@eslint/js": "^9.4.0",
     "babel-jest": "^29.7.0",
+    "cypress": "^13.10.0",
     "eslint": "^9.4.0",
+    "eslint-plugin-cypress": "^3.3.0",
     "eslint-plugin-jest": "^28.5.0",
     "globals": "^15.3.0",
     "husky": "^9.0.11",
