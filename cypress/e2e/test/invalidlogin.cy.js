@@ -3,7 +3,7 @@ import { invalidEmail, invalidPassword } from '../../support/testdata';
 describe('Cannot login with invalid credentials', () => {
   it('cannot login with invalid credentials', () => {
     // Visit the login page
-    cy.visit('https://bekzatbagdat.github.io/social-media-client/');
+    cy.visit('/');
 
     // Ensuring the register modal is not visible
     cy.get('#registerModal').then(($modal) => {
